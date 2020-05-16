@@ -9,7 +9,7 @@ this engine can be used for various time periods, both historical and fantastica
 
 ### battle preparation
 
-there will be some level preparation needed for battle, a user could go into battle, but will have very little chance of success
+there will be some level of preparation needed for battle, a user could go into battle without any preparation, but will have very little chance of success
 
 * unit training
 * supply and funding
