@@ -1,11 +1,41 @@
 # turn based strategy backend engine
 
-this engine can be used for various time periods, both historical anf fantastical, flexibility in altering the story line, but fairly prescriptive when you get down to battle mode.  basically a user controls a country and fights against other countries for territory and dominance.  there can be diplomacy.  maps are fixed and run until everyone quits or there's one person standing, these maps can last many years, so lobg as it's active.
+this engine can be used for various time periods, both historical and fantastical, flexibility in altering the story line, but fairly prescriptive when you get down to battle mode.  basically a user controls a faction or country and fights against other factions for territory and dominance.  there can be diplomacy.  maps are fixed and run until everyone quits or there's one person standing, these maps can last many years, so long as it's active.
 
 
 ## gameplay
 
-* several aspects: battle preparation amd battle
+* several aspects: battle preparation and battle
+
+### battle preparation
+
+there will be some level preparation needed for battle, a user could go into battle, but will have very little chance of success
+
+* unit training
+* supply and funding
+* supply line
+* marching to attack area
+* scouting, intelligence gathering
+* unit organization
+* leadership selection
+* diplomacy
+* policy
+* strategy
+
+if it's a defensive preparation then it could the following
+
+* fortifications
+* traps
+
+### battles
+
+users will play the overall commander and will have full omniscient view for his units
+
+* troop arrangement
+* orders
+* assessment of current
+* tracking of progress
+* fortifications can be created
 
 ## maps
 
