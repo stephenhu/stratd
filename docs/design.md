@@ -47,6 +47,7 @@ users will play the overall commander and will have full omniscient view for his
 
 ## units
 
+* age
 * rank
 * specialty type, e.g. horse, gun, infantry, medic
 * hitpoints
@@ -57,6 +58,8 @@ users will play the overall commander and will have full omniscient view for his
 * dexterity
 * experience
 * endurance
+* emotional intelligence
+* psychological
 * luck
 * loyalty +
 * morale
