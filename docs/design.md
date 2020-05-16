@@ -1,8 +1,11 @@
-# turn based strategy backend
+# turn based strategy backend engine
+
+this engine can be used for various time periods, both historical anf fantastical, flexibility in altering the story line, but fairly prescriptive when you get down to battle mode.  basically a user controls a country and fights against other countries for territory and dominance.  there can be diplomacy.  maps are fixed and run until everyone quits or there's one person standing, these maps can last many years, so lobg as it's active.
+
 
 ## gameplay
 
-* several aspects: diplomacy, battle preparation, battle tactics
+* several aspects: battle preparation amd battle
 
 ## maps
 
