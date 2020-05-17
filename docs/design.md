@@ -27,6 +27,8 @@ if the user is defending then preparation could consist of:
 * fortifications
 * traps
 
+battle preparation will be a very important aspect of the game, careful consideration may decide the outcome of the game, a more superior force may be destroyed by a lesser force, a force with more people may also be destroyed by a smaller force, these are all posibilities so planning is critical
+
 ### battles
 
 users will play the overall commander and will have full omniscient view and control over
@@ -38,11 +40,12 @@ users will play the overall commander and will have full omniscient view and con
 * tracking of progress
 * fortifications can be created
 * intelligence gathering
+* care of injured
 
 ## maps
 
 * squares or polygons
-* terrain such as mountain, plains, hills
+* terrain such as mountains, plains, hills, water
 * fog of war, but special intelligence can provide some predictionse
 * random generation
 * varying sizes
@@ -74,6 +77,7 @@ users will play the overall commander and will have full omniscient view and con
 * strategy
 * respect +
 * knowledge
+* constitution
 
 '+ means this is a relative attribute'
 
@@ -84,5 +88,5 @@ users will play the overall commander and will have full omniscient view and con
 * economy should be based on cities, industries, and population, shouldnt require manually mining resources like starcraft, this should something that happens in the background
 * each faction should have different attributes like populations, income, army competence
 * what should the multiplayer angle be since this is turn based, some players will block the whole game's progress?  perhaps if users dont progress within a certain time, then a default set of actions will be enacted
-* heroes will appear over time since all units have varying degrees of ability, it is up to the user to recognize these units and promote them or develop them
+* hero units will appear over time since all units have varying degrees of ability, it is up to the user to recognize these units and promote them or develop them, there will be an additional intangible field for each unit which adds some increase in abilities
 
