@@ -29,8 +29,9 @@ if the user is defending then preparation could consist of:
 
 ### battles
 
-users will play the overall commander and will have full omniscient view for his units
+users will play the overall commander and will have full omniscient view and control over
 
+* chain of command, including organization
 * troop arrangement
 * orders
 * assessment of current
@@ -80,7 +81,8 @@ users will play the overall commander and will have full omniscient view for his
 ## notes
 
 * technology shouldnt be constantly evolving making battles, strategy, and experience more important, should be a much more gradual approach, focus on battles and preparation for battles
-* economy should be based on cities, industries, and population shouldnt require manually mining resources like starcraft
+* economy should be based on cities, industries, and population, shouldnt require manually mining resources like starcraft, this should something that happens in the background
 * each faction should have different attributes like populations, income, army competence
-* what should the multiplayer angle be since this is turn based, some players will block the whole game's progress?  perhaps if users dont progress then a default set of actions will be enacted
+* what should the multiplayer angle be since this is turn based, some players will block the whole game's progress?  perhaps if users dont progress within a certain time, then a default set of actions will be enacted
+* heroes will appear over time since all units have varying degrees of ability, it is up to the user to recognize these units and promote them or develop them
 
