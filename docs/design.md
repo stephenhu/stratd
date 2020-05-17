@@ -1,6 +1,6 @@
 # turn based strategy backend engine
 
-this engine can be used for various time periods, both historical and fantastical, flexibility in altering the story line, but fairly prescriptive when you get down to battle mode.  basically a user controls a faction or country and fights against other factions for territory and dominance.  there can be diplomacy.  maps are fixed and run until everyone quits or there's one person standing, these maps can last many years, so long as it's active.
+this engine can be used for various time periods, both historical and fantasy, there's flexibility in altering the story line, but engine is fairly prescriptive when you get down to battle mode.  basically a user controls a faction or country and fights against other factions for territory and dominance.  there can be diplomacy.  maps are fixed and run until everyone quits or there's one person standing, these maps can last many years, so long as it's active.
 
 
 ## gameplay
@@ -45,7 +45,7 @@ users will play the overall commander and will have full omniscient view and con
 ## maps
 
 * squares or polygons
-* terrain such as mountains, plains, hills, water
+* terrain such as mountain, plain, hill, water, forest, steppe, desert, plateau, swamp, wasteland
 * fog of war, but special intelligence can provide some predictionse
 * random generation
 * varying sizes
@@ -78,6 +78,7 @@ users will play the overall commander and will have full omniscient view and con
 * respect +
 * knowledge
 * constitution
+* learning
 
 '+ means this is a relative attribute'
 
