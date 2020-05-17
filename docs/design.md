@@ -22,7 +22,7 @@ there will be some level of preparation needed for battle, a user could go into 
 * policy
 * strategy
 
-if it's a defensive preparation then it could the following
+if the user is defending then preparation could consist of:
 
 * fortifications
 * traps
@@ -36,6 +36,7 @@ users will play the overall commander and will have full omniscient view for his
 * assessment of current
 * tracking of progress
 * fortifications can be created
+* intelligence gathering
 
 ## maps
 
