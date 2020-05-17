@@ -79,7 +79,7 @@ users will play the overall commander and will have full omniscient view for his
 ## notes
 
 * technology shouldnt be constantly evolving making battles, strategy, and experience more important, should be a much more gradual approach, focus on battles and preparation for battles
-* economy should be based on cities and population, shouldnt require mining resources like starcraft
+* economy should be based on cities, industries, and population shouldnt require manually mining resources like starcraft
 * each faction should have different attributes like populations, income, army competence
 * what should the multiplayer angle be since this is turn based, some players will block the whole game's progress?  perhaps if users dont progress then a default set of actions will be enacted
 
