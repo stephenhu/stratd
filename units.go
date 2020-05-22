@@ -1,16 +1,20 @@
 package main
 
 import (
-	"math/rand"
-	"time"
+	//"log"
+	//"math"
+	//"math/rand"
 )
 
 const (
-	ATTRIBUTE_MAX					= 1000
-	ATTRIBUTE_DEFAULT     = 100
 	HITPOINT_MAX          = 3000
+	HITPOINT_MIN          = 100
 	AGE_OFFICER_MAX       = 65
+	AGE_OFFICER_MIN       = 28
 	AGE_SOLDIER_MAX       = 45
+	AGE_SOLDIER_MIN       = 16
+	EXP_UNIT_MAX       		= 20000
+	EXP_UNIT_MIN       		= 100
 )
 
 const (
@@ -33,8 +37,8 @@ const (
 const (
 	SIZE_AVERAGE = iota
 	SIZE_SMALL
-	SIZE_BIG
-	SIZE_HUGE
+	SIZE_LARGE
+	SIZE_XLARGE
 )
 
 type Unit struct {
@@ -66,47 +70,40 @@ type Unit struct {
 }
 
 
-func generateUnit(o bool) *Unit {
+func generateUnit(rank int) *Unit {
 
 	u := Unit{}
 
-	seed := rand.NewSource(time.Now().UnixNano())
-
-	r := rand.New(seed)
-
-	if o {
-		u.Age 						= r.Intn(AGE_SOLDIER_MAX)
+	if rank == RANK_SOLDIER || rank == RANK_SERGEANT || rank == RANK_REGIMENTAL_SERGEANT {
+		u.Age 						= attrRange(AGE_SOLDIER_MIN, AGE_SOLDIER_MAX)
 	} else {
-		u.Age 						= r.Intn(AGE_OFFICER_MAX)
+		u.Age 						= attrRange(AGE_OFFICER_MIN, AGE_OFFICER_MAX)
 	}
 
-	if o {
-		u.Rank 						= RANK_SOLDIER
-	} else {
-		u.Rank 						= RANK_LIEUTENANT
-	}
+	u.Rank 						= rank
+	u.Experience 			= attrRange(EXP_UNIT_MIN, EXP_UNIT_MAX)
+	u.Size 						= attrSelect(SIZE_AVERAGE, SIZE_SMALL, SIZE_LARGE, SIZE_XLARGE)
 
-	u.Size 						= r.Intn(SIZE_HUGE)
-	u.Intelligence 		= r.Intn(ATTRIBUTE_MAX)
-	u.Strength 				= r.Intn(ATTRIBUTE_MAX)
-	u.Vision 					= r.Intn(ATTRIBUTE_MAX)
-	u.Charisma 				= r.Intn(ATTRIBUTE_MAX)
-	u.Dexterity 			= r.Intn(ATTRIBUTE_MAX)
-	u.Endurance 			= r.Intn(ATTRIBUTE_MAX)
-	u.Eq 							= r.Intn(ATTRIBUTE_MAX)
-	u.Psychology 			= r.Intn(ATTRIBUTE_MAX)
-	u.Luck 						= r.Intn(ATTRIBUTE_MAX)
-	u.Loyalty 				= r.Intn(ATTRIBUTE_MAX)
-	u.Morale 					= ATTRIBUTE_DEFAULT
-	u.Speed 					= r.Intn(ATTRIBUTE_MAX)
-	u.Health 					= r.Intn(AGE_SOLDIER_MAX)
-	u.Recovery 				= r.Intn(AGE_SOLDIER_MAX)
-	u.Discipline 			= r.Intn(AGE_SOLDIER_MAX)
-	u.Learning 				= r.Intn(AGE_SOLDIER_MAX)
-	u.Stamina 				= r.Intn(AGE_SOLDIER_MAX)
-	u.Agility 				= r.Intn(AGE_SOLDIER_MAX)
-	u.Wisdom 					= r.Intn(AGE_SOLDIER_MAX)
-	u.Movement 				= r.Intn(AGE_SOLDIER_MAX)
+	u.Intelligence 		= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Strength 				= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Vision 					= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Charisma 				= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Dexterity 			= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Endurance 			= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Eq 							= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Psychology 			= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Luck 						= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Loyalty 				= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Speed 					= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Health 					= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Recovery 				= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Discipline 			= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Learning 				= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Stamina 				= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Agility 				= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Wisdom 					= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Movement 				= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
+	u.Morale 					= attrStandard(ATTRIBUTE_SIGMA, ATTRIBUTE_MEAN)
 
 	return &u
 

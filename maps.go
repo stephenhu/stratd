@@ -3,8 +3,6 @@ package main
 import (
 	"fmt"
 	"log"
-	"math/rand"
-	"time"
 )
 
 const (
@@ -59,9 +57,6 @@ func buildTerrain(gm GameMap, conf MapConfig) {
 	//totalForest		:= 0
 	totalSpaces 	:= conf.Width * conf.Height
 
-	seed := rand.NewSource(time.Now().UnixNano())
-
-	r := rand.New(seed)
 
 	for x := 0; x < conf.Width; x++ {
 
@@ -69,7 +64,7 @@ func buildTerrain(gm GameMap, conf MapConfig) {
 
 		for y := 0; y < conf.Height; y++ {
 
-			v := r.Intn(SURFACE_WATER)
+			v := rng.Intn(SURFACE_WATER)
 			a := 0
 
 			if v == SURFACE_WATER || v == SURFACE_DEEP_WATER {
@@ -83,14 +78,14 @@ func buildTerrain(gm GameMap, conf MapConfig) {
 			} else {
 
 				if conf.Terrain == TERRAIN_MOUNTAIN {
-					a = r.Intn(t.MaxMountainAltitude)
+					a = rng.Intn(t.MaxMountainAltitude)
 					totalMtn++
 				} else {
-					a = r.Intn(t.MaxHillAltitude)
+					a = rng.Intn(t.MaxHillAltitude)
 				}
 
 				if totalMtn > t.MaxMountainPct {
-					a = r.Intn(t.MaxHillAltitude)
+					a = rng.Intn(t.MaxHillAltitude)
 				}
 
 			}

@@ -39,6 +39,8 @@ func main() {
 
 	log.Printf("%s v%s starting on port %s...\n", APP_NAME, APP_VERSION, app.Server.Port)
 
+	initRng()
+
 	router := initRouter()
 
 	log.Fatal(http.ListenAndServe(addr(), router))
