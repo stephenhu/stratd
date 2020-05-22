@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"runtime"
 )
 
 const (
@@ -12,14 +11,6 @@ const (
 )
 
 
-func logf(sev string, msg string) {
-
-	pc := make([]uintptr, 10)
-
-	runtime.Callers(2, pc)
-
-	f := runtime.FuncForPC(pc[0])
-
-	log.Printf("[%s] %s(): %s", sev, f.Name(), msg)
-
+func logf(sev string, fname, msg string) {
+	log.Printf("[%s] %s(): %s", sev, fname, msg)
 } // logf
