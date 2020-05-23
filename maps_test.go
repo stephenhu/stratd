@@ -4,6 +4,10 @@ import (
 	"testing"
 )
 
+func init() {
+	initRng()
+} // init
+
 
 func TestGenerateMapPlainSmall(t *testing.T) {
 

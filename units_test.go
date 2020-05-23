@@ -5,9 +5,12 @@ import (
 )
 
 
-func TestGenerateColonel(t *testing.T) {
-
+func init() {
 	initRng()
+} // init
+
+
+func TestGenerateColonel(t *testing.T) {
 
 	m := generateUnit(RANK_COLONEL)
 
